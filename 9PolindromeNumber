@@ -1,0 +1,23 @@
+from ast import While
+
+
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        if x < 0:
+            return False
+        a = x
+        length = 0
+        while a>1:
+            a = a/10
+            length +=1
+        else:
+            for i in range(length//2):
+                if x//(10**(length-i)) != x%(10**(length-i)):
+                    print(i)
+                    return False
+                    break
+        return True
+
+
+alma = Solution()
+print(alma.isPalindrome(101))
