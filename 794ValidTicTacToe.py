@@ -1,5 +1,5 @@
 class Solution:
-    def validTicTacToe(self, board: List[str]) -> bool:
+    def validTicTacToe(self, board) -> bool:
         d = {'X': 1, 'O': -1, ' ': 0}               
         s = [d[ch] for ch in ''.join(board)]        
         sm = sum(s)
@@ -15,6 +15,6 @@ class Solution:
         
 
 
-board = Solution(["XO ","XO ","X  "])
+board = Solution()
 
-print(board.validTicTacToe())
+print(board.validTicTacToe(board=['XXX','XOX','OOO']))
